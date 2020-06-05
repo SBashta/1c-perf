@@ -1,0 +1,13 @@
+@ECHO OFF
+SET CounterName=1c
+::ECHO Stop counter "%CounterName%"...
+::logman stop %CounterName%
+::ECHO Delete counter "%CounterName%"...
+::logman delete %CounterName%
+
+ECHO Adding counter "%CounterName%"...
+logman create counter %CounterName% -f bincirc -cf counters_1c.lst -si 10 -v mmddhhmm
+
+::ECHO start counter "%CounterName%"...
+::logman start %CounterName%
+ECHO Complete
